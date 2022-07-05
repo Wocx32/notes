@@ -39,7 +39,7 @@ Note: all of the changes will be done in `/etc/ssh/sshd_config`
 ## Backup config file
 
 ```shell
-$ cp /etc/ssh/sshd_config /etc/ssh/sshd_config_bak
+$ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config_bak
 ```
 
 
@@ -102,6 +102,13 @@ ClientAliveInterval 300
 Save config file and restart sshd service
 
 ```shell
-$ service sshd restart
+$ sudo service sshd restart
+```
+
+## Enable ufw
+
+```bash
+$ sudo ufw allow {ssh port}
+$ sudo ufw enable
 ```
 
